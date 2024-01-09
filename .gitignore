@@ -1,0 +1,6 @@
+# dependency directory
+node_modules
+
+# log files
+npm-debug.log*
+debug.log

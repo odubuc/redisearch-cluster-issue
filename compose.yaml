@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+    instance1:
+        image: redis/redis-stack-server:latest
+        container_name: redis-instance1
+        network_mode: host
+        environment:
+            - REDIS_ARGS=--cluster-enabled yes --port 6379
+    instance2:
+        container_name: redis-instance2
+        image: redis/redis-stack-server:latest
+        network_mode: host
+        environment:
+            - REDIS_ARGS=--cluster-enabled yes --port 6380
+    instance3:
+        container_name: redis-instance3
+        image: redis/redis-stack-server:latest
+        network_mode: host
+        environment:
+            - REDIS_ARGS=--cluster-enabled yes --port 6381
